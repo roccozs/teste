@@ -1,6 +1,8 @@
 class AlunosController < ApplicationController
   before_action :set_aluno, only: [:show, :edit, :update, :destroy]
-
+  
+  #Alteração feita do PC do Adriano!
+  
   # GET /alunos
   # GET /alunos.json
   def index
