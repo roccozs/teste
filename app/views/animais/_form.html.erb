@@ -1,0 +1,25 @@
+<%= form_for(@animai) do |f| %>
+  <% if @animai.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@animai.errors.count, "error") %> prohibited this animai from being saved:</h2>
+
+      <ul>
+      <% @animai.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :especie %><br>
+    <%= f.text_field :especie %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
